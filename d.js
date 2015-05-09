@@ -1,31 +1,25 @@
-function _toArray (arrayLike) {
-  return [].slice.call(arrayLike)
-}
-
-function _objectAssign (target, source) {
-  let keys = Object.keys(source)
-  keys.forEach(key => target[key] = source[key])
-}
+import toArray from './util/toArray'
+import objectAssign from './util/objectAssign'
 
 class DOM {
   constructor (selector) {
     let elements = document.querySelectorAll(selector)
     this.length = elements.length
-    _objectAssign(this, elements)
+    objectAssign(this, elements)
   }
 
   map (fn) {
-    _toArray(this).map(el => fn.call(el, el))
+    toArray(this).map(el => fn.call(el, el))
     return this
   }
 
   each (fn) {
-    _toArray(this).forEach(el => fn.call(el, el))
+    toArray(this).forEach(el => fn.call(el, el))
     return this
   }
 
   reduce (fn) {
-    _toArray(this).forEach(el => fn.call(el, el))
+    toArray(this).forEach(el => fn.call(el, el))
     return this
   }
 
@@ -45,7 +39,7 @@ class DOM {
   }
 
   hasClass (className) {
-    for (let el of _toArray(this)) {
+    for (let el of toArray(this)) {
       if (el.classList.contains(className)) {
         return true
       }
