@@ -34,6 +34,19 @@ class DOM {
     return this.map(el => el.classList.add(...classes))
   }
 
+  toggleClass (classNames) {
+    let classes = classNames.split(' ')
+    return this.map(el => el.classList.toggle(...classes))
+  }
+
+  hasClass (className) {
+    for (let el of _toArray(this)) {
+      if (el.classList.contains(className)) {
+        return true
+      }
+    }
+    return false
+  }
 }
 
 window.$ = selector => new DOM(selector);
