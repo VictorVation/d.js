@@ -54,6 +54,30 @@ class DOM {
     )
     return this
   }
+
+  attr (attributeName, value=null) {
+    if (value == null) {
+      return this[0][attributeName]
+    } else {
+      return this.each(el => el[attributeName] = value)
+    }
+  }
+
+  val (value=null) {
+    if (value == null) {
+      return this.attr('value')
+    } else {
+      this.attr('value', value)
+    }
+  }
+
+  text (value=null) {
+    if (value == null) {
+      return this.attr('textContent')
+    } else {
+      this.attr('textContent', value)
+    }
+  }
 }
 
 window.$ = window.d = selector => new DOM(selector)
