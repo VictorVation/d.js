@@ -16,8 +16,5 @@
     "dist": "browserify d.js -t babelify | uglifyjs -cm > dist/d.min.js"
   },
   "author": "Victor Szeto <me@victorszeto.com> (http://victorszeto.com/)",
-  "license": "MIT",
-  "dependencies": {
-    "object-assign": "^2.0.0"
-  }
+  "license": "MIT"
 }

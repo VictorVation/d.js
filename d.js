@@ -1,12 +1,17 @@
-import assign from 'object-assign'
+function _toArray (arrayLike) {
+  return [].slice.call(arrayLike)
+}
 
-const _toArray = (arrayLike) => [].slice.call(arrayLike)
+function _objectAssign (target, source) {
+  let keys = Object.keys(source)
+  keys.forEach(key => target[key] = source[key])
+}
 
 class DOM {
   constructor (selector) {
     let elements = document.querySelectorAll(selector)
     this.length = elements.length
-    return assign(this, elements)
+    _objectAssign(this, elements)
   }
 
   map (fn) {
@@ -57,4 +62,4 @@ class DOM {
   }
 }
 
-window.$ = selector => new DOM(selector);
+window.$ = selector => new DOM(selector)
