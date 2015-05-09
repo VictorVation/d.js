@@ -19,6 +19,11 @@ class DOM {
     return this
   }
 
+  reduce (fn) {
+    _toArray(this).forEach(el => fn.call(el, el))
+    return this
+  }
+
   addClass (classNames) {
     let classes = classNames.split(' ')
     return this.map(el => el.classList.add(...classes))
