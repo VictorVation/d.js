@@ -56,4 +56,4 @@ class DOM {
   }
 }
 
-window.$ = selector => new DOM(selector)
+window.$ = window.d = selector => new DOM(selector)
