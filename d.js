@@ -47,6 +47,14 @@ class DOM {
     }
     return false
   }
+
+  on (eventNames, callback) {
+    let events = eventNames.split(' ')
+    events.forEach(event =>
+      this.map(el => el.addEventListener(event, callback, false))
+    )
+    return this
+  }
 }
 
 window.$ = selector => new DOM(selector);
