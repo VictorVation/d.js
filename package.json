@@ -1,0 +1,23 @@
+{
+  "name": "d.js",
+  "version": "0.0.1",
+  "description": "Miniscule DOM manipulation library.",
+  "main": "d.js",
+  "devDependencies": {
+    "babel": "^5.2.17",
+    "babelify": "^6.0.2",
+    "browserify": "^10.1.3",
+    "standard": "^3.7.3",
+    "uglify": "^0.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify d.js -t babelify > dist/d.js",
+    "dist": "browserify d.js -t babelify | uglifyjs -cm > dist/d.min.js"
+  },
+  "author": "Victor Szeto <me@victorszeto.com> (http://victorszeto.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  }
+}
