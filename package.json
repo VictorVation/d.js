@@ -12,9 +12,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
     "build": "browserify d.js -t babelify > dist/d.js",
     "dist": "browserify d.js -t babelify | uglifyjs -cm > dist/d.min.js"
   },
   "author": "Victor Szeto <me@victorszeto.com> (http://victorszeto.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "standard": {
+    "ignore": [
+      "dist/*"
+    ]
+  }
 }
