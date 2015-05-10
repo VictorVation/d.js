@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "build": "browserify d.js -t babelify | tee dist/d.js | uglifyjs -cm > dist/d.min.js"
+    "build": "npm run clean && browserify d.js -t babelify | tee dist/d.js | uglifyjs -cm > dist/d.min.js",
+    "clean": "rm dist/*"
   },
   "author": "Victor Szeto <me@victorszeto.com> (http://victorszeto.com/)",
   "license": "MIT",
