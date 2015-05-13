@@ -191,6 +191,20 @@ var DOM = (function () {
         this.attr('textContent', value);
       }
     }
+  }, {
+    key: 'show',
+    value: function show() {
+      return this.each(function (el) {
+        return el.style.display = '';
+      });
+    }
+  }, {
+    key: 'hide',
+    value: function hide() {
+      return this.each(function (el) {
+        return el.style.display = 'none';
+      });
+    }
   }]);
 
   return DOM;
