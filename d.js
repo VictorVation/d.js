@@ -78,6 +78,14 @@ class DOM {
       this.attr('textContent', value)
     }
   }
+
+  show () {
+    return this.each(el => el.style.display = '')
+  }
+
+  hide () {
+    return this.each(el => el.style.display = 'none')
+  }
 }
 
 window.$ = window.d = selector => new DOM(selector)
