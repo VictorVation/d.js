@@ -1,6 +1,6 @@
 # d.js
 
-Minuscule DOM manipulation library containing a minimal subset of the [jQuery API](https://api.jquery.com/), written in ES6 via Babel and Browserify. Just **1178 bytes** gzipped, perfect for quick demos or low-bandwidth situations.
+Minuscule DOM manipulation library containing a minimal subset of the [jQuery API](https://api.jquery.com/), written in ES6 via Babel and Browserify. Just **1214 bytes** gzipped, perfect for quick demos or low-bandwidth situations.
 
 ## Usage
 
@@ -17,4 +17,5 @@ Implements a subset of the jQuery API, using `$` or `d` as a selector. Currently
 - `addClass`, `removeClass`, `toggleClass`, `hasClass`
 - `on` for adding event listeners
 - `attr`, `val`, `text` for getting and setting properties and text values of elements.
+- `show` and `hide` to add/remove DOM elements
 
